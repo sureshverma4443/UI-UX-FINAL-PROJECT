@@ -28,7 +28,62 @@
           Our website</h1>
         
     </div>
+    <h4>Products</h4>
     <div id="Productpage" class="Productpage"></div>
+
+    <div class="Contactus">
+        <div class="Contactimg">
+            <img src="https://images.pexels.com/photos/585752/pexels-photo-585752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        </div>
+        <div class="Contactform">
+            <div class="Registrationform">
+                <h6>Contact Us</h6>
+                <form id="form">
+                    <label>Name:-</label>
+                    <input type="text" id="Name" name="name" placeholder="Enter your name" required><br>
+                    <label>Mobile:-</label>
+                    <input type="number" id="Mobile" name="mobile" placeholder="Enter your mobile number" required><br>
+                    <label>Address:-</label>
+                    <input type="text" id="Password"  placeholder="Enter your Address" required><br>
+                    <label>Message:-</label>
+                    <input type="text" id="Mobile"  placeholder="Enter your Message" required><br>
+                    <div class="button"><button id="Register">Submit</button></div>
+                    </form>
+                    
+                  
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac urna nec libero malesuada.</p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h2>Follow Us</h2>
+                <div class="social-media">
+                    <a href="" >Facebook</a>
+                    <a href="">Youtube</a>
+                    <a href="" >Instagram</a>
+                    <a href="" >Whatapps</a>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
 
     <script>
         let Apidata = []
@@ -99,7 +154,7 @@
                 btn2.innerText = "Buy Now"
 
                 btns.append(btn1, btn2)
-                div.append(img,h1,p,rating, btns)
+                div.append(img,h1,h2,p,btns)
                 Productpage.append(div)
             })
         }
