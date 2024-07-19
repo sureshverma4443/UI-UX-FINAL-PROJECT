@@ -13,10 +13,12 @@
             <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8da29d84916351.Y3JvcCwzMDE5LDIzNjIsODIsMA.jpg">
         </div>
         <div class="link">
-            <a href="Loginform.html">Home</a>
+            <a href="login.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="https://www.google.com/">Google</a>
+            <span class="span">&#9776;</span>
+
         </div>
         <div id="username">
             <span id="user">Guest</span>
@@ -87,25 +89,11 @@
 
     <script>
         let Apidata = []
-        let arr = (localStorage.getItem ("user"))||[]
         
-        if(arr){
          let users =JSON.parse(localStorage.getItem ("user"))||[];
-         let user=users.find((user)=>user.email===arr);
-         if(user){
-            document.getElementById("user").innerHTML=user.name;
-            }
-         }else{
-            window.location.href="index.html";
-         }
-
-
-
-//         console.log(arr)
-//         let user = document.getElementById("user")
-//         console.log(arr.name)
-//         user.innerHTML = `${arr.name}`
-// *
+        let user=document.getElementById("user");
+         user.innerText=`👮${users.Name}`;
+         
         async function getdata() {
             try {
                 let res = await axios.get("https://fakestoreapi.com/products")
