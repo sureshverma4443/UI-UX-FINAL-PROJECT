@@ -89,8 +89,12 @@
 
     <script>
         let Apidata = []
+        let users = JSON.parse(localStorage.getItem("user")) || [];
+        if(Apidata){
+            let users= JSON.parse(localStorage.getItem(""))
+        }
         
-         let users =JSON.parse(localStorage.getItem ("user"))||[];
+    
         let user=document.getElementById("user");
          user.innerText=`👮${users.Name}`;
          
