@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    background-color: rgb(38, 37, 75);
+    padding: .3%;
+    z-index: 2;
+    position: sticky;
+    top: 0px;
+}
+.logo img{
+    border-radius: 50%;
+    width: 30%;
+}
+.link {
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    font-size: larger;
+
+   
+
+}
+.link a{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-decoration: none;
+
+}
+#username{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    color: white;
+    
+}
+.herosection{
+    display: grid;
+    place-items: center;
+    width: 90%;
+    height: 800px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://images.pexels.com/photos/414660/pexels-photo-414660.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+
+.herosection h1{
+    color:black;
+    margin:auto;
+    font-size: 100px;
+   
+   
+}
+    
+
+#Productpage{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 1%;
+}
+#card img{
+    width: 80%;
+    height: 200px;
+    
+}
+#card{
+    margin: 5%;
+    border: 1px solid black;
+    padding: 5%;
+    
+}
+#btns{
+    display: flex;
+    margin: auto;
+    gap: 10%;
+}
+#btn1{
+    background-color: red;
+    color: white;
+}
+#btn2{
+    background-color:green;
+    color: white;
+}
+
