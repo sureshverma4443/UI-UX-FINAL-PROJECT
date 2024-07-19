@@ -28,4 +28,28 @@
 
     
 </body>
+
+<script>
+    let arr=JSON.parse(localStorage.getItem ("user"))||[]
+
+ let form=document.getElementById("form")
+let Register=document.getElementById("Register")
+Register.addEventListener("click",Userdata)
+ 
+Userdata()
+function Userdata(e){
+    // e.preventDefault()
+    let obj={
+        name:document.getElementById("Name").value,
+        email:document.getElementById("Email").value,
+        password:document.getElementById("Password").value,
+        mobile:document.getElementById("Mobile").value,
+        }
+        arr.push(obj)
+        localStorage.setItem ("user",JSON.stringify(arr))
+        alert="Data Save"
+        form.reset()
+        console.log(arr)
+    }
+    </script>
 </html>
