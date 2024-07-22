@@ -27,8 +27,11 @@
 
 <script>
     let arr = JSON.parse(localStorage.getItem("user")) || [];
+
+    // Ensure that arr is an array
+    if (!Array.isArray(arr)) {
         arr = [];
-    
+    }
 
     let form = document.getElementById("form");
     let Register = document.getElementById("Register");
