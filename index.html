@@ -7,49 +7,53 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="Registrationform">
-        <h1>Registration form</h1>
-        <form id="form">
-            <label>Name:-</label>
-            <input type="text" id="Name" name="name" placeholder="Enter your name" required><br>
+    <div class="Loginform">
+        <h1>Login form</h1>
+        <form id="loginForm">
             <label>Email:-</label>
             <input type="email" id="Email" name="email" placeholder="Enter your email" required><br>
             <label>Password:-</label>
             <input type="password" id="Password" name="password" placeholder="Enter your password" required><br>
-            <label>Mobile:-</label>
-            <input type="number" id="Mobile" name="mobile" placeholder="Enter your mobile number" required><br>
-            <div class="button"><button id="Register">Register</button></div>
-            </form>
-            <h2>Already Registered? <a href="login.html">Login form</a></h2>          
-          
+            <div class="button"><button type="submit" id="Login">Login</button></div>
+        </form>
+        <h2>Don't have an account? <a href="Registration.html">Register</a></h2>          
     </div>
 
-
-
-    
-</body>
-
-<script>
-    let arr=JSON.parse(localStorage.getItem ("user"))||[]
-
- let form=document.getElementById("form")
-let Register=document.getElementById("Register")
-Register.addEventListener("click",Userdata)
+    <script>
+       
+        let arr=JSON.parse(localStorage.getItem("user"))||[]
  
-Userdata()
-function Userdata(e){
-    // e.preventDefault()
-    let obj={
-        name:document.getElementById("Name").value,
-        email:document.getElementById("Email").value,
-        password:document.getElementById("Password").value,
-        mobile:document.getElementById("Mobile").value,
+        let Email=document.getElementById("Email")
+        let Password=document.getElementById("Password")
+ 
+        let Login=document.getElementById("Login")
+        Login.addEventListener("click",logindata)
+ 
+ 
+        function logindata() {
+             let userDetails = {
+                 Email: document.getElementById("Email").value,
+                 Password: document.getElementById("Password").value
+             };
+ 
+             let value = arr.find((user) =>
+                 user.email === userDetails.Email &&
+                 user.password === userDetails.Password
+             );
+             if (value) {
+                localStorage.setItem("user",JSON.stringify(value))
+                 window.location.href="Home.html"               
+                 alert("Login Done");
+             } else {
+                 alert("data not found")
+             }
+ 
         }
-        arr.push(obj)
-        localStorage.setItem ("user",JSON.stringify(arr))
-        alert="Data Save"
-        form.reset()
-        console.log(arr)
-    }
-    </script>
+ 
+ 
+ 
+ 
+     </script>
+
+</body>
 </html>
